@@ -1,3 +1,6 @@
+<?php
+    include "assets/php/msession.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
     <?php
-        include "assets/php/msession.php";
         echo '<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">';
         echo '<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">';
         echo '<link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">';

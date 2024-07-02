@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = mysqli_prepare($con, $insertQuery);
             mysqli_stmt_bind_param($stmt, "sss", $username, $email, $password);
             if (mysqli_stmt_execute($stmt)) {
-                $_SESSION['username'] = $username; // Set session variable
+                $_SESSION['username'] = $username;
                 header("Location: /mcc_hotel/login");
                 exit();
             } else {
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($result && mysqli_num_rows($result) == 1) {
             $user = mysqli_fetch_assoc($result);
-            $_SESSION['username'] = $user['username']; // Set session variable
+            $_SESSION['username'] = $user['username'];
             header("Location: /mcc_hotel/");
             exit();
         } else {
