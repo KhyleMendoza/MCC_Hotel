@@ -19,7 +19,7 @@
             exit();
         }
 
-        $sql = "INSERT INTO reservation (name, email, booktime, checkin, checkout, room, guests, notes, status)
+        $sql = "INSERT INTO reservation (name, email, book_time, checkin, checkout, room, guests, notes, status)
                 VALUES (?, ?, NOW(), ?, ?, ?, ?, ?, 'Pending')";
 
         if ($stmt = $con->prepare($sql)) {
