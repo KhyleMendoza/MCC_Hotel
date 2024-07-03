@@ -75,7 +75,6 @@
     </div>
     </nav>
 
-    <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
         <div class="container">
             <div class="row">
@@ -91,9 +90,7 @@
             </div>
         </div>
     </div>
-    <!-- Breadcrumb Section End -->
 
-    <!-- Room Details Section Begin -->
     <section class="room-details-section spad">
         <div class="container">
             <div class="row">
@@ -213,7 +210,6 @@
             </div>
         </div>
     </section>
-    <!-- Room Details Section End -->
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <?php

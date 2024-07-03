@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="ap-service-item set-bg" data-setbg="assets/img/about/hero.jpg">
+                        <div class="ap-service-item set-bg" data-setbg="assets/img/about/about3.jpg">
                             <div class="api-text">
                                 <h3></h3>
                             </div>
@@ -121,9 +121,7 @@
             </div>
         </div>
     </section>
-    <!-- About Us Page Section End -->
 
-    <!-- Gallery Section Begin -->
     <section class="gallery-section ">
         <div class="container">
             <div class="row">

@@ -73,7 +73,6 @@
     </div>
     </nav>
 
-    <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="container">
             
@@ -93,9 +92,7 @@
             <div class="hs-item set-bg" data-setbg="assets/img/hero/hero-3.jpg"></div>
         </div>
     </section>
-    <!-- Hero Section End -->
 
-    <!-- About Us Section Begin -->
     <section class="aboutus-section spad">
         <div class="container">
             <div class="row">
@@ -125,9 +122,7 @@
             </div>
         </div>
     </section>
-    <!-- About Us Section End -->
 
-    <!-- Services Section End -->
     <section class="services-section spad">
         <div class="container">
             <div class="row">
@@ -190,9 +185,7 @@
             </div>
         </div>
     </section>
-    <!-- Services Section End -->
 
-    <!-- Home Room Section Begin -->
     <section class="hp-room-section">
         <div class="container-fluid">
             <div class="hp-room-items">
@@ -317,9 +310,7 @@
             </div>
         </div>
     </section>
-    <!-- Home Room Section End -->
 
-    <!-- Testimonial Section Begin -->
     <section class="testimonial-section spad">
         <div class="container">
             <div class="row">
@@ -366,7 +357,6 @@
             </div>
         </div>
     </section>
-    <!-- Testimonial Section End -->
 
     <footer class="footer">
         <div class="container">

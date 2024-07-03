@@ -72,7 +72,6 @@
     </div>
     </nav>
 
-    <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
         <div class="container">
             <div class="row">
@@ -88,9 +87,7 @@
             </div>
         </div>
     </div>
-    <!-- Breadcrumb Section End -->
 
-    <!-- Rooms Section Begin -->
     <section class="rooms-section">
         <div class="container">
             <div class="row">
@@ -277,7 +274,6 @@
             </div>
         </div>
     </section>
-    <!-- Rooms Section End -->
 
     <?php
         echo '<script src="assets/js/jquery-3.3.1.min.js"></script>';

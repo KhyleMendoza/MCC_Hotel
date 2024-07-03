@@ -18,13 +18,6 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    /*------------------
-		Navigation
-	--------------------*/
-    $(".mobile-menu").slicknav({
-        prependTo: '#mobile-menu-wrap',
-        allowParentLinks: true
-    });
 
     /*------------------
         Hero Slider
@@ -53,14 +46,6 @@
         smartSpeed: 1200,
         nav: true,
         navText: ["<i class='arrow_left'></i>", "<i class='arrow_right'></i>"]
-    });
-
-    /*------------------
-		Date Picker
-	--------------------*/
-    $(".date-input").datepicker({
-        minDate: 0,
-        dateFormat: 'dd MM, yy'
     });
 
     /*------------------
