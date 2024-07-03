@@ -175,33 +175,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review-add">
-                        <h4>Add Review</h4>
-                        <form  class="ra-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*">
-                                </div>
-                                <div class="col-lg-12">
-                                    <div>
-                                        <h5>You Rating:</h5>
-                                        <div class="rating">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star-half_alt"></i>
-                                        </div>
-                                    </div>
-                                    <textarea placeholder="Your Review"></textarea>
-                                    <button>Submit Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
                 <div class="col-lg-4" id="reservation-section">
                     <div class="room-booking">

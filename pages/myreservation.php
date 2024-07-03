@@ -73,54 +73,55 @@
 </nav>
 
 <div class="container mt-5">
-    <?php if ($hasReservations): ?>
-        <h2 class="text-center">My Reservations</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered mt-3">
-                <thead>
-                <tr>
-                    <th>Reservation ID</th>
-                    <th>Room</th>
-                    <th>Reservation Time</th>
-                    <th>Check-in</th>
-                    <th>Check-out</th>
-                    <th>Guests</th>
-                    <th>Notes</th>
-                    <th>Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['book_id'] . "</td>";
-                    echo "<td>" . $row['room'] . "</td>";
-                    echo "<td>" . $row['book_time'] . "</td>";
-                    echo "<td>" . $row['checkin'] . "</td>";
-                    echo "<td>" . $row['checkout'] . "</td>";
-                    echo "<td>" . $row['guests'] . "</td>";
-                    echo "<td>";
-                    if (!empty($row['notes'])) {
-                        echo "<span class='short-notes'>" . substr($row['notes'], 0, 50) . "</span>";
-                        echo "<span class='full-notes'>" . $row['notes'] . "</span>";
-                        echo "<div class='tooltip'><span>...</span><span class='tooltiptext'>" . $row['notes'] . "</span></div>";
-                    } else {
-                        echo "";
-                    }
-                    echo "</td>";
-                    echo "<td>" . $row['status'] . "</td>";
-                    echo "</tr>";
-                }
-                ?>
-                </tbody>
-            </table>
+    <div class="card">
+        <div class="card-body">
+            <?php if ($hasReservations): ?>
+                <h3 class="mb-4">My Reservations</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Reservation ID</th>
+                                <th>Room</th>
+                                <th>Reservation Time</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Guests</th>
+                                <th>Notes</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php while ($row = $result->fetch_assoc()): ?>
+                                <tr>
+                                    <td><?php echo $row['book_id']; ?></td>
+                                    <td><?php echo $row['room']; ?></td>
+                                    <td><?php echo $row['book_time']; ?></td>
+                                    <td><?php echo $row['checkin']; ?></td>
+                                    <td><?php echo $row['checkout']; ?></td>
+                                    <td><?php echo $row['guests']; ?></td>
+                                    <td>
+                                        <?php if (!empty($row['notes'])): ?>
+                                            <span class='short-notes'><?php echo substr($row['notes'], 0, 50); ?></span>
+                                            <span class='full-notes'><?php echo $row['notes']; ?></span>
+                                            <div class='tooltip'><span>...</span><span class='tooltiptext'><?php echo $row['notes']; ?></span></div>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td><?php echo $row['status']; ?></td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php else: ?>
+                <div class="text-center">
+                    <h3>No reservations yet.</h3>
+                    <a href="/mcc_hotel/room" style="color: #dfa974 !important;" class="primary-btn">Book Now</a>
+                </div>
+            <?php endif; ?>
         </div>
-    <?php else: ?>
-        <div class="text-center">
-            <h3>No reservations yet.</h3>
-            <a href="/mcc_hotel/room" class="primary-btn" style="color: #dfa974 !important;">BOOK NOW</a>
-        </div>
-    <?php endif; ?>
+    </div>
 </div>
 
 <?php
