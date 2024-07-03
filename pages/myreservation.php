@@ -117,7 +117,7 @@
             <?php else: ?>
                 <div class="text-center">
                     <h3>No reservations yet.</h3>
-                    <a href="/mcc_hotel/room" style="color: #dfa974 !important;" class="primary-btn">Book Now</a>
+                    <a href="/mcc_hotel/room" style="font-size: 15px; color: #dfa974 !important;" class="primary-btn">Book Now</a>
                 </div>
             <?php endif; ?>
         </div>
