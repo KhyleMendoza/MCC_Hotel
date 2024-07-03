@@ -51,6 +51,7 @@
                     Account
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/mcc_hotel/my-reservation">My Reservation</a>
                     <a class="dropdown-item" href="/mcc_hotel/logout">Logout</a>
                 </div>
             </li>
