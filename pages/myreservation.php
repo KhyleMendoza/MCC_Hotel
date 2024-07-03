@@ -23,77 +23,8 @@
     echo '<link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">';
     echo '<link rel="stylesheet" href="assets/css/style.css" type="text/css">';
     echo '<link rel="stylesheet" href="assets/css/nav.css" type="text/css">';
+    echo '<link rel="stylesheet" href="assets/css/reservation.css" type="text/css">';
     ?>
-    <style>
-        body {
-            overflow-x: hidden;
-        }
-
-        .short-notes {
-            display: inline;
-        }
-
-        .full-notes {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            padding: 5px;
-            border: 1px solid #ddd;
-            z-index: 1;
-        }
-
-        td:hover .full-notes {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .full-notes {
-                display: none;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .short-notes {
-                display: inline;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            td:hover .full-notes {
-                display: none;
-            }
-
-            td .tooltip {
-                position: relative;
-                display: inline-block;
-                cursor: pointer;
-            }
-
-            td .tooltip .tooltiptext {
-                visibility: hidden;
-                width: 200px;
-                background-color: #555;
-                color: #fff;
-                text-align: center;
-                border-radius: 6px;
-                padding: 5px 0;
-                position: absolute;
-                z-index: 1;
-                bottom: 100%;
-                left: 50%;
-                margin-left: -100px;
-                opacity: 0;
-                transition: opacity 0.3s;
-            }
-
-            td .tooltip:hover .tooltiptext {
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 <body>
 <div id="preloder">
@@ -150,7 +81,7 @@
                 <tr>
                     <th>Reservation ID</th>
                     <th>Room</th>
-                    <th>Reservation Date & Time</th>
+                    <th>Reservation Time</th>
                     <th>Check-in</th>
                     <th>Check-out</th>
                     <th>Guests</th>
