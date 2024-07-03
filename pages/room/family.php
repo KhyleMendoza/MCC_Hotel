@@ -258,19 +258,5 @@
         echo '<script src="assets/js/owl.carousel.min.js"></script>';
         echo '<script src="assets/js/main.js"></script>';
     ?>
-    <script>
-        $(document).ready(function() {
-            $("#book-now-btn").click(function(e) {
-                if ($(window).width() < 768) {
-                    e.preventDefault();
-                    $('html, body').animate({
-                        scrollTop: $("#reservation-section").offset().top
-                    }, 1000);
-                } else {
-                    window.location.href = "#";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
