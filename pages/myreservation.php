@@ -12,18 +12,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
     <?php
-    echo '<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/style.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/nav.css" type="text/css">';
-    echo '<link rel="stylesheet" href="assets/css/reservation.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/style.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/nav.css" type="text/css">';
+        echo '<link rel="stylesheet" href="assets/css/reservation.css" type="text/css">';
     ?>
 </head>
 <body>
@@ -124,14 +124,14 @@
 </div>
 
 <?php
-echo '<script src="assets/js/jquery-3.3.1.min.js"></script>';
-echo '<script src="assets/js/bootstrap.min.js"></script>';
-echo '<script src="assets/js/jquery.magnific-popup.min.js"></script>';
-echo '<script src="assets/js/jquery.nice-select.min.js"></script>';
-echo '<script src="assets/js/jquery-ui.min.js"></script>';
-echo '<script src="assets/js/jquery.slicknav.js"></script>';
-echo '<script src="assets/js/owl.carousel.min.js"></script>';
-echo '<script src="assets/js/main.js"></script>';
+    echo '<script src="assets/js/jquery-3.3.1.min.js"></script>';
+    echo '<script src="assets/js/bootstrap.min.js"></script>';
+    echo '<script src="assets/js/jquery.magnific-popup.min.js"></script>';
+    echo '<script src="assets/js/jquery.nice-select.min.js"></script>';
+    echo '<script src="assets/js/jquery-ui.min.js"></script>';
+    echo '<script src="assets/js/jquery.slicknav.js"></script>';
+    echo '<script src="assets/js/owl.carousel.min.js"></script>';
+    echo '<script src="assets/js/main.js"></script>';
 ?>
 </body>
 </html>
