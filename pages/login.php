@@ -17,38 +17,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['register'])) {
         $username = mysqli_real_escape_string($con, $_POST['username']);
-        $checkQuery = "SELECT * FROM users WHERE email=?";
-        $stmt = mysqli_prepare($con, $checkQuery);
-        mysqli_stmt_bind_param($stmt, "s", $email);
-        mysqli_stmt_execute($stmt);
-        $checkResult = mysqli_stmt_get_result($stmt);
+        $confirmPassword = mysqli_real_escape_string($con, $_POST['confirm_password']);
 
-        if (mysqli_num_rows($checkResult) > 0) {
-            $error = "Email already exists";
+        if ($password !== $confirmPassword) {
+            $error = "Password and Confirm Password must be match.";
         } else {
-            $insertQuery = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-            $stmt = mysqli_prepare($con, $insertQuery);
-            mysqli_stmt_bind_param($stmt, "sss", $username, $email, $password);
-            if (mysqli_stmt_execute($stmt)) {
-                $_SESSION['username'] = $username;
-                header("Location: /mcc_hotel/login");
-                exit();
+            $checkQuery = "SELECT * FROM users WHERE email=?";
+            $stmt = mysqli_prepare($con, $checkQuery);
+            mysqli_stmt_bind_param($stmt, "s", $email);
+            mysqli_stmt_execute($stmt);
+            $checkResult = mysqli_stmt_get_result($stmt);
+
+            if (mysqli_num_rows($checkResult) > 0) {
+                $error = "Email already exists";
             } else {
-                $error = "Registration failed: " . mysqli_error($con);
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                $insertQuery = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+                $stmt = mysqli_prepare($con, $insertQuery);
+                mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPassword);
+                if (mysqli_stmt_execute($stmt)) {
+                    header("Location: /mcc_hotel/login");
+                    exit();
+                } else {
+                    $error = "Registration failed: " . mysqli_error($con);
+                }
             }
         }
     } else {
-        $query = "SELECT * FROM users WHERE email=? AND password=?";
+        $query = "SELECT * FROM users WHERE email=?";
         $stmt = mysqli_prepare($con, $query);
-        mysqli_stmt_bind_param($stmt, "ss", $email, $password);
+        mysqli_stmt_bind_param($stmt, "s", $email);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
 
         if ($result && mysqli_num_rows($result) == 1) {
             $user = mysqli_fetch_assoc($result);
-            $_SESSION['username'] = $user['username'];
-            header("Location: /mcc_hotel/");
-            exit();
+            if (password_verify($password, $user['password'])) {
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['email'] = $user['email'];
+                header("Location: /mcc_hotel/");
+                exit();
+            } else {
+                $error = "Incorrect email or password";
+            }
         } else {
             $error = "Incorrect email or password";
         }
@@ -77,6 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" name="username" placeholder="Username" required/>
                 <input type="email" name="email" placeholder="Email" required/>
                 <input type="password" name="password" placeholder="Password" required/>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required/>
                 <button type="submit" name="register">Register</button>
                 <span id="overlayLeft2">Already have an account? Sign In</span>
                 <?php if ($error && isset($_POST['register'])) { echo '<p style="color: red;">' . $error . '</p>'; } ?>

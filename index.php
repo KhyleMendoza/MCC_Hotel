@@ -26,6 +26,9 @@
         case "reservation.executive-suite":
             include "pages/room/executive.php";
             break;
+        case "book":
+            include "assets/php/book.php";
+            break;
         case "about":
             include "pages/about.php";
             break;

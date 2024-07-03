@@ -25,6 +25,7 @@
         echo '<link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">';
         echo '<link rel="stylesheet" href="assets/css/style.css" type="text/css">';
         echo '<link rel="stylesheet" href="assets/css/nav.css" type="text/css">';
+        echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">';
     ?>
 </head>
 
@@ -204,31 +205,28 @@
                 <div class="col-lg-4" id="reservation-section">
                     <div class="room-booking">
                         <h3>Reservation</h3>
-                        <form action="#">
+                        <form action="/mcc_hotel/book" method="POST">
                             <div class="check-date">
                                 <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
+                                <input type="text" class="flatpickr datetime-input" id="date-in" name="checkin">
                                 <i class="icon_calendar"></i>
                             </div>
                             <div class="check-date">
                                 <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
+                                <input type="text" class="flatpickr datetime-input" id="date-out" name="checkout">
                                 <i class="icon_calendar"></i>
                             </div>
                             <div class="select-option">
                                 <label for="guest">Guests:</label>
-                                <select id="guest">
-                                    <option value="">1 Adults</option>
-                                    <option value="">2 Adults</option>
-                                    <option value="">3 Adults</option>
-                                    <option value="">4 Adults</option>
-                                    <option value="">5 Adults</option>
+                                <select id="guest" name="guests">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
                                 </select>
                             </div>
                             <div class="select-option">
                                 <label for="room">Room:</label>
-                                <select id="room">
-                                    <option value="">Premium King Room</option>
+                                <select id="room" name="room">
+                                    <option value="Double Room">DOUBLE ROOM</option>
                                 </select>
                             </div>
                             <div class="notes">
@@ -244,7 +242,9 @@
     </section>
     <!-- Room Details Section End -->
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <?php
+        echo '<script src="assets/js/dt.js"></script>';
         echo '<script src="assets/js/jquery-3.3.1.min.js"></script>';
         echo '<script src="assets/js/bootstrap.min.js"></script>';
         echo '<script src="assets/js/jquery.magnific-popup.min.js"></script>';

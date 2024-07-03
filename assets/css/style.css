@@ -905,7 +905,6 @@ ul, ol {
 	border-radius: 2px;
 	font-size: 16px;
 	color: #19191a;
-	text-transform: uppercase;
 	font-weight: 500;
 	padding-left: 20px;
 }
@@ -946,9 +945,9 @@ ul, ol {
 .room-booking form .select-option .nice-select span {
 	font-size: 16px;
 	color: #19191a;
-	text-transform: uppercase;
 	font-weight: 500;
 }
+
 .room-booking form .select-option .nice-select .list {
 	margin-top: 0;
 	width: 100%;
