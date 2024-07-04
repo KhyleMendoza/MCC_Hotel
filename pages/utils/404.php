@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Error</title>
     <link rel="icon" href="assets/img/logo/logo.png">
+    <script>
+        window.addEventListener('load', function () {;
+            var _banner = document.querySelector("div[style='text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;']");
+            _banner.style.display = "none";
+        });
+    </script>
     <?php 
         echo '<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">';
     ?>
