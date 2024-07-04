@@ -19,6 +19,30 @@ td:hover .full-notes {
     display: block;
 }
 
+.cancel-btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+    background-color: #c2894c;
+    color: #fff;
+}
+
+.cancel-btn:active {
+    background-color: #a8723c;
+    color: #fff;
+}
+
+.cancelled {
+    background-color: #ddd;
+    color: #888 !important;
+    pointer-events: none;
+}
+
 @media (max-width: 768px) {
     .full-notes {
         display: none;
@@ -66,3 +90,4 @@ td:hover .full-notes {
         opacity: 1;
     }
 }
+

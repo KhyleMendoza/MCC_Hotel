@@ -50,6 +50,9 @@
         case "signout":
             include "pages/utils/logout2.php";
             break;
+        case "cancel":
+            include "assets/php/cancel.php";
+            break;
         case "success":
             include "pages/utils/successfully.php";
             break;

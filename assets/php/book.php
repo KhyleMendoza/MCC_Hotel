@@ -14,13 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $room = $_POST['room'];
     $notes = $_POST['notes'];
 
-    // Basic validation
     if (empty($checkin) || empty($checkout) || empty($guests) || empty($room)) {
         header("Location: {$_SERVER['HTTP_REFERER']}?error=Please fill in all required fields.");
         exit();
     }
 
-    // Validate date format and check that checkout is after checkin
     if (!strtotime($checkin) || !strtotime($checkout) || strtotime($checkin) >= strtotime($checkout)) {
         header("Location: {$_SERVER['HTTP_REFERER']}?error=Invalid date format or checkout date is not after checkin date.");
         exit();

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MCC Hotel</title>
+    <title>MCC Hotel - My Reservations</title>
     <link rel="icon" href="assets/img/logo/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
@@ -89,6 +89,7 @@
                                 <th>Guests</th>
                                 <th>Notes</th>
                                 <th>Status</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -105,10 +106,14 @@
                                             <span class='short-notes'><?php echo substr($row['notes'], 0, 50); ?></span>
                                             <span class='full-notes'><?php echo $row['notes']; ?></span>
                                             <div class='tooltip'><span>...</span><span class='tooltiptext'><?php echo $row['notes']; ?></span></div>
-                                        <?php else: ?>
                                         <?php endif; ?>
                                     </td>
                                     <td><?php echo $row['status']; ?></td>
+                                    <td>
+                                        <?php if ($row['status'] != 'Cancelled'): ?>
+                                            <a href="/mcc_hotel/cancel?id=<?php echo $row['book_id']; ?>" class="btn btn-danger">Cancel</a>
+                                        <?php endif; ?>
+                                    </td>
                                 </tr>
                             <?php endwhile; ?>
                         </tbody>
