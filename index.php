@@ -48,10 +48,13 @@
             include "assets/php/logout.php";
             break;
         case "signout":
-            include "pages/logout2.php";
+            include "pages/utils/logout2.php";
+            break;
+        case "success":
+            include "pages/utils/successfully.php";
             break;
         default:
-            include "pages/404.php";
+            include "pages/utils/404.php";
             break;
     }
 ?>
