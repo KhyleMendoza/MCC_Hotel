@@ -104,13 +104,8 @@ Feel completely relaxed and rejuvenating when you stay with us.</p>
                             <span>About Us</span>
                             <div><img src="assets/img/logo/mlogo.png" style="height: 100px;"></div>
                         </div>
-                        <p class="f-para">Here at the MCC Hotel, we care about the details: 
-                        plush beddings, adequate room amenities, convenient spaces,
-                        and most of all, the warmth and hospitality you can 
-                        expect from us</p>
-                        <p class="s-para">No function is too big or too small
-                        We can host anything from your conferences 
-                        to your birthdays here at The MCC Hotel</p>
+                        <p class="f-para">There's a lot you will enjoy at The MCC Hotel. From the moment you step into our lobby to the time you check out, we aim to make your stay one of pleasure and comfort. Our friendly staff will always be on hand to assist with anything you might require.</p>
+                        <p class="s-para">Experience the finest service and a truly pleasant ambience only here at The MCC Hotel.</p>
                         <a href="/mcc_hotel/about" class="primary-btn about-btn">Read More</a>
                     </div>
                 </div>
