@@ -35,9 +35,6 @@
         case "about":
             include "pages/about.php";
             break;
-        case "about2":
-            include "pages/about2.php";
-            break;
         case "login":
             include "pages/login.php";
             break;

@@ -48,7 +48,7 @@
             <?php if(isset($_SESSION['username'])): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Account
+                    <?php echo htmlspecialchars($_SESSION['username']); ?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/mcc_hotel/my-reservation">My Reservation</a>
@@ -80,7 +80,9 @@
                 <div class="col-lg-6" style="height: 77vh;">
                     <div class="hero-text">
                         <h1 style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">MCC Hotel</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatum laboriosam vitae laborum excepturi soluta distinctio incidunt illo eos facilis tempore.</p>
+                        <p>The MCC Hotel exudes the unique charm of an
+ elegant lush landscape within the bustling city of Mabalacat. 
+Feel completely relaxed and rejuvenating when you stay with us.</p>
                         <a href="#" class="primary-btn">Discover Now</a>
                     </div>
                 </div>
@@ -102,8 +104,13 @@
                             <span>About Us</span>
                             <div><img src="assets/img/logo/mlogo.png" style="height: 100px;"></div>
                         </div>
-                        <p class="f-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus explicabo deleniti harum sunt odio voluptas suscipit, vel, voluptatibus mollitia molestiae asperiores molestias expedita numquam animi, neque quidem facere! Quidem, ratione.</p>
-                        <p class="s-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, in illo quos cum libero, exercitationem sed explicabo natus sapiente qui.</p>
+                        <p class="f-para">Here at the MCC Hotel, we care about the details: 
+                        plush beddings, adequate room amenities, convenient spaces,
+                        and most of all, the warmth and hospitality you can 
+                        expect from us</p>
+                        <p class="s-para">No function is too big or too small
+                        We can host anything from your conferences 
+                        to your birthdays here at The MCC Hotel</p>
                         <a href="/mcc_hotel/about" class="primary-btn about-btn">Read More</a>
                     </div>
                 </div>

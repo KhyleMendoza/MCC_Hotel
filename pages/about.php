@@ -49,7 +49,7 @@
             <?php if(isset($_SESSION['username'])): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Account
+                    <?php echo htmlspecialchars($_SESSION['username']); ?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/mcc_hotel/my-reservation">My Reservation</a>
@@ -81,7 +81,10 @@
                     <div class="col-lg-6">
                         <div class="ap-title">
                             <h2>Welcome To Mcc Hotel.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quasi distinctio natus fugiat molestiae animi? Eos incidunt hic dignissimos nobis commodi sunt nostrum, voluptas, quia saepe libero numquam facere tempore?</p>
+                            <p>Here at the MCC Hotel, we care about the details: 
+                            plush beddings, adequate room amenities, convenient spaces,
+                            and most of all, the warmth and hospitality you can 
+                            expect from us</p>
                         </div>
                     </div>
                     <div class="col-lg-5 offset-lg-1">

@@ -50,7 +50,7 @@
             <?php if(isset($_SESSION['username'])): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Account
+                    <?php echo htmlspecialchars($_SESSION['username']); ?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/mcc_hotel/my-reservation">My Reservation</a>
