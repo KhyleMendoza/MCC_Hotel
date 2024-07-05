@@ -70,6 +70,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">About</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/mcc_hotel/contact">Contact</a>
+            </li>
         </ul>
     </div>
     </nav>

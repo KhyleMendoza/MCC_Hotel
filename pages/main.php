@@ -69,6 +69,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/mcc_hotel/about">About</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/mcc_hotel/contact">Contact</a>
+            </li>
         </ul>
     </div>
     </nav>
