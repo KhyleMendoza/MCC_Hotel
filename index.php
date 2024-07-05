@@ -8,6 +8,9 @@
         case "room":
             include "pages/room.php";
             break;
+        case "contact":
+            include "pages/contact.php";
+            break;
         case "my-reservation":
             include "pages/myreservation.php";
             break;
