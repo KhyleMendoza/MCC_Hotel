@@ -80,7 +80,7 @@
         <div class="container">
             
             <div class="row">
-                <div class="col-lg-6" style="height: 77vh;">
+                <div class="col-lg-6" style="height: 72vh;">
                     <div class="hero-text">
                         <h1 style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">MCC Hotel</h1>
                         <p>The MCC Hotel exudes the unique charm of an
